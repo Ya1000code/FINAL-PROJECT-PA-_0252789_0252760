@@ -8,15 +8,17 @@ using namespace std;
 
 class Animal {
 public:
-    Animal(string name, string sound) : name(name), sound(sound) {}
+//adding nickname
+    Animal(string name, string sound, string nickname) : name(name), sound(sound),nickname(nickname)  {}
 
     void makeSound() const {
-        cout << name << " says: " << sound << endl;
+        cout << name <<"("<< nickname<<")" << " says: " << sound << endl;
     }
 
 private:
     string name;
     string sound;
+    string nickname;
 };
 
 //Zoo function to ad our animals
@@ -41,14 +43,20 @@ private:
 int main() {
     Zoo myZoo;
 
-    Animal lion("Lion", "Roar");
-    Animal monkey("Monkey", "Ooh Ooh Ah Ah");
-    Animal parrot("Parrot", "Squawk");
+    Animal lion("Lion", "Roar", "Marty");
+    Animal monkey("Monkey", "Ooh Ooh Ah Ah", "Yamil");
+    Animal parrot("Parrot", "Squawk", "Manuel");
+
+    //Adition to code by Emilio Argueta
+    Animal Elephant("Elephant","UUAAAAH","Emilio");
+    Animal snake("snake","hsss", "Eva");
 
     myZoo.addAnimal(lion);
     myZoo.addAnimal(monkey);
     myZoo.addAnimal(parrot);
-
+    myZoo.addAnimal(Elephant);
+    myZoo.addAnimal(snake);
+    
     myZoo.performConcert();
 
     return 0;
