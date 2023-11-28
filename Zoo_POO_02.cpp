@@ -12,7 +12,7 @@ public:
     Animal(string name, string sound, string nickname) : name(name), sound(sound),nickname(nickname)  {}
 
     void makeSound() const {
-        cout << name << " says: " << sound << endl;
+        cout << name <<"("<< nickname<<")" << " says: " << sound << endl;
     }
 
 private:
